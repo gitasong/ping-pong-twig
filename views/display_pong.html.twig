@@ -9,12 +9,14 @@
         {% if error_message %}
             <h1>{{ error_message }}</h1>
         {% else %}
-            <h1>Here's your Ping-Pong:</h1>
-            <ul>
-                {% for num in num_array %}
-                    <li>{{ num }}</li>
-                {% endfor %}
-            </ul>
+            {% if num_arr %}
+                <h1>Here's your Ping-Pong:</h1>
+                <ul>
+                    {% for num in num_arr %}
+                        <li>{{ num }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         {% endif %}
     </div>
 </body>

@@ -22,6 +22,8 @@
                     if (!(is_numeric($val))) {
                         $error_message = "Please enter a number.";
                         return $error_message;
+                    } else {
+                        $error_message = "";
                     }
                 }
             }
@@ -41,7 +43,6 @@
                     array_push($num_arr, $i);
                 }
             }
-            var_dump($num_arr);
             return $num_arr;
         }
     }
