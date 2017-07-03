@@ -37,7 +37,15 @@
             for ($i = 1; $i <= $num; $i++) {
                 array_push($num_arr, $i);
             }
+            var_dump($num_arr);
             return $num_arr;
+        }
+
+        function ping($num)
+        {
+            if ($num % 3 == 0) {
+                return "ping";
+            }
         }
     }
 

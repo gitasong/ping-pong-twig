@@ -56,6 +56,32 @@
             $this->assertEquals([1, 2, 3, 4, 5], $result);
         }
 
+        function test_ping()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = "3";
+
+            //Act
+            $result = $test_PingPongGenerator->ping($input);
+
+            //Assert
+            $this->assertEquals("ping", $result);
+        }
+
+        // function test_pong()
+        // {
+        //     //Arrange
+        //     $test_PingPongGenerator = new PingPongGenerator;
+        //     $input = "5";
+        //
+        //     //Act
+        //     $result = $test_PingPongGenerator->pong($input);
+        //
+        //     //Assert
+        //     $this->assertEquals("pong", $result);
+        // }
+
     }
 
 ?>
