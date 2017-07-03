@@ -30,6 +30,19 @@
             $this->assertEquals("Spaces are not allowed.", $result);
         }
 
+        function test_reject_nonNum()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = "r@nd0m_nVmb3r$!#";
+
+            //Act
+            $result = $test_PingPongGenerator->rejectNonNum($input);
+
+            //Assert
+            $this->assertEquals("Please enter a number.", $result);
+        }
+
     }
 
 ?>

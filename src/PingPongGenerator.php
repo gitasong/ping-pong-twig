@@ -23,6 +23,13 @@
                 return "Spaces are not allowed.";
             }
         }
+
+        function rejectNonNum($num)
+        {
+            if (!(is_numeric($num))) {
+                return "Please enter a number.";
+            }
+        }
     }
 
 ?>
