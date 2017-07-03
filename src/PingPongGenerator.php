@@ -16,6 +16,13 @@
                 return "Please enter a number.";
             }
         }
+
+        function rejectWhitespace($num)
+        {
+            if (strpbrk($num," ")) {
+                return "Spaces are not allowed.";
+            }
+        }
     }
 
 ?>
