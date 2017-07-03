@@ -17,7 +17,7 @@
             }
         }
 
-        // reject whitespace
+        // // reject whitespace
         function rejectWhitespace($num)
         {
             if (strpbrk($num," ")) {
@@ -25,7 +25,7 @@
             }
         }
 
-        // reject non-numeric input
+        // // reject non-numeric input
         function rejectNonNum($num)
         {
             if (!(is_numeric($num))) {
@@ -33,7 +33,7 @@
             }
         }
 
-        // basic count method
+        // // basic count method
         function count($num)
         {
             $num_arr = [];
@@ -44,7 +44,7 @@
             return $num_arr;
         }
 
-        // return ping
+        // // return ping
         function ping($num)
         {
             if ($num % 3 == 0) {
@@ -52,7 +52,7 @@
             }
         }
 
-        // return pong
+        // // return pong
         function pong($num)
         {
             if ($num % 5 == 0) {
@@ -72,19 +72,31 @@
         function combineCount($num)
         {
             $num_arr = [];
-            for ($i = 1; $i <= $num; $i++) {
-                if ($i % 15 == 0) {
-                    array_push($num_arr, "ping-pong");
-                } elseif ($i % 3 == 0) {
-                    array_push($num_arr, "ping");
-                } elseif ($i % 5 == 0) {
-                    array_push($num_arr, "pong");
+            if (empty($num)) {
+                return "Please enter a number.";
+            } else {
+                if (strpbrk($num," ")) {
+                    return "Spaces are not allowed.";
                 } else {
-                    array_push($num_arr, $i);
+                    if (!(is_numeric($num))) {
+                        return "Please enter a number.";
+                    } else {
+                        for ($i = 1; $i <= $num; $i++) {
+                            if ($i % 15 == 0) {
+                                array_push($num_arr, "ping-pong");
+                            } elseif ($i % 3 == 0) {
+                                array_push($num_arr, "ping");
+                            } elseif ($i % 5 == 0) {
+                                array_push($num_arr, "pong");
+                            } else {
+                                array_push($num_arr, $i);
+                            }
+                        }
+                        var_dump($num_arr);
+                        return $num_arr;
+                    }
                 }
             }
-            var_dump($num_arr);
-            return $num_arr;
         }
     }
 

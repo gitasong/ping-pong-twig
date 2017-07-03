@@ -99,10 +99,18 @@
         {
             //Arrange
             $test_PingPongGenerator = new PingPongGenerator;
-            $input = "15";
+            // $input = "";
+            // $input = " ";
+            // $input = "r@nd0m_nVmb3r$!#";
+            // $input = "15";
+            // $input = "1 5";
+            // $input = "&* !!";
+            // $input = "&*84 &@ 33!!";
+            // $input = "15*$%%89";
 
             //Act
             $result = $test_PingPongGenerator->combineCount($input);
+            var_dump($result);
 
             //Assert
             $this->assertEquals([1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "ping-pong"], $result);
