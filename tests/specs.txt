@@ -1,0 +1,13 @@
+The program should display and error message for no input.
+
+The program should display an error message for inputted whitespace.
+
+The program should display an error message for non-numeric inputs.
+
+The program should print a list of numbers from 1 to the inputted number.
+
+The program should print "ping" instead of the number for numbers divisible by 3.
+
+The program should print "pong" instead of the number for numbers divisible by 5.
+
+The program should print "ping-pong" instead of the number for numbers divisible by both 3 and 5.
