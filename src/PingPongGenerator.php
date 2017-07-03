@@ -54,6 +54,13 @@
                 return "pong";
             }
         }
+
+        function pingPong($num)
+        {
+            if ($num % 15 == 0) {
+                return "ping-pong";
+            }
+        }
     }
 
 ?>
