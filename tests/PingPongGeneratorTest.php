@@ -43,6 +43,19 @@
             $this->assertEquals("Please enter a number.", $result);
         }
 
+        function test_count()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = "5";
+
+            //Act
+            $result = $test_PingPongGenerator->count($input);
+
+            //Assert
+            $this->assertEquals([1, 2, 3, 4, 5], $result);
+        }
+
     }
 
 ?>

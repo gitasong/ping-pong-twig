@@ -30,6 +30,15 @@
                 return "Please enter a number.";
             }
         }
+
+        function count($num)
+        {
+            $num_arr = [];
+            for ($i = 1; $i <= $num; $i++) {
+                array_push($num_arr, $i);
+            }
+            return $num_arr;
+        }
     }
 
 ?>
