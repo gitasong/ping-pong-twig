@@ -9,38 +9,40 @@
 <?php
     class PingPongGenerator
     {
-        function count($num)
+        function validate($val)
         {
-            $num_arr = [];
-            if (empty($num)) {
+            if (empty($val)) {
                 $error_message = "Please enter a number.";
                 return $error_message;
             } else {
-                if (strpbrk($num," ")) {
+                if (strpbrk($val," ")) {
                     $error_message = "Spaces are not allowed.";
                     return $error_message;
                 } else {
-                    if (!(is_numeric($num))) {
+                    if (!(is_numeric($val))) {
                         $error_message = "Please enter a number.";
                         return $error_message;
-                    } else {
-                        for ($i = 1; $i <= $num; $i++) {
-                            if ($i % 15 == 0) {
-                                array_push($num_arr, "ping-pong");
-                            } elseif ($i % 3 == 0) {
-                                array_push($num_arr, "ping");
-                            } elseif ($i % 5 == 0) {
-                                array_push($num_arr, "pong");
-                            } else {
-                                array_push($num_arr, $i);
-                            }
-                        }
-                        var_dump($num_arr);
-                        return $num_arr;
                     }
                 }
             }
         }
-    }
 
+        function count($num)
+        {
+            $num_arr = [];
+            for ($i = 1; $i <= $num; $i++) {
+                if ($i % 15 == 0) {
+                    array_push($num_arr, "ping-pong");
+                } elseif ($i % 3 == 0) {
+                    array_push($num_arr, "ping");
+                } elseif ($i % 5 == 0) {
+                    array_push($num_arr, "pong");
+                } else {
+                    array_push($num_arr, $i);
+                }
+            }
+            var_dump($num_arr);
+            return $num_arr;
+        }
+    }
 ?>
