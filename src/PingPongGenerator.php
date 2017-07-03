@@ -47,6 +47,13 @@
                 return "ping";
             }
         }
+
+        function pong($num)
+        {
+            if ($num % 5 == 0) {
+                return "pong";
+            }
+        }
     }
 
 ?>
