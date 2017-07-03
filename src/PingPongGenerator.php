@@ -13,13 +13,16 @@
         {
             $num_arr = [];
             if (empty($num)) {
-                return "Please enter a number.";
+                $error_message = "Please enter a number.";
+                return $error_message;
             } else {
                 if (strpbrk($num," ")) {
-                    return "Spaces are not allowed.";
+                    $error_message = "Spaces are not allowed.";
+                    return $error_message;
                 } else {
                     if (!(is_numeric($num))) {
-                        return "Please enter a number.";
+                        $error_message = "Please enter a number.";
+                        return $error_message;
                     } else {
                         for ($i = 1; $i <= $num; $i++) {
                             if ($i % 15 == 0) {
